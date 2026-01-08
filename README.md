@@ -1,8 +1,3 @@
-GitHubのリポジトリ（`README.md`）にそのままコピー＆ペーストして使える、実用的で技術的なMarkdownを作成しました。
-
-最新のKeras/TensorFlowの書き方（`Input(shape)`）や、追加したドロップアウトについても盛り込んでいます。
-
----
 
 # Fashion-MNIST Classification with CNN
 
