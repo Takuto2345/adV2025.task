@@ -13,14 +13,21 @@ Google Colab上で構築した、畳み込みニューラルネットワーク�
 ### 畳み込み演算 (Convolution)
 
 画像の特徴（エッジやパターン）を抽出するために、カーネル（フィルタ）を用いた畳み込み演算の部分
+入力画像 $I$ に対してカーネル（フィルタ） $K$とすると
+
+$$(I * K)(i, j) = \sum_{m} \sum_{n} I(i+m, j+n) K(m, n)$$
 
 ### 活性化関数 (ReLU)
 
 モデルに非線形性を導入し、複雑な形状を学習可能にするため、中間層にReLUを使用
 
+$$f(x) = \max(0, x)$$
+
 ### 出力層 (Softmax)
 
 最終的な10クラスの予測確率を算出するためにソフトマックス関数を使用
+
+$$\sigma(\mathbf{z})_i = \frac{e^{z_i}}{\sum_{j=1}^{10} e^{z_j}}$$
 
 ## 3. モデル構成
 [![](https://mermaid.ink/img/pako:eNp1ktGK1DAUhl8l5LozNG3TdnIhuO10d8BFcfXGdpE4zcwU2qSkiXQd5nbVfYgFwRcQvFHQtxnFtzCTdsYLNRSSw_-dv-ecZAuXomSQwLWk7QY8SwsOzHqYL3irFQFe3JsPXYPJ5AE4yxPBX3spAb4HVlWtmOwc4Pf-9ZB1Zqkkv6T9EyHqiq8PrNd7o55YPT25hMG_XFJLzf_rMrd6lmc1VYpxAlDoukDzSnUjkVniPE8Z75jRvXiQHfCUPXo-QucWushTKVpxaFVSxYA7xaN-YfXFYAIea2Xngdyj1ZVYqYb2hh74Tr8aZpgxqrRkL-e9knSpKsHzn--_7L9__nH3bf_26_7Tx-O4xqmMbY_dDRvj5V_GSU27rlpVS2pN9-9uf324_2OXjX2N5Q_b4mQHHXPHVQmJkpo5sGGyoYcQbg9IAdWGNayAxBxLtqK6VgUs-M6ktZS_EKI5Zkqh15tjoNvSjC2tqCnxRFCtxNUNX54yzO-ZTITmChIUYmsJyRb2JoxmU2-GXW-GMApR4EYOvIFkgqdxEGLsRkaLoihAOwe-sVW403jmY4SDMAoDP_Kj2IGsrJSQl8NTti969xuxBuHU?type=png)](https://mermaid.live/edit#pako:eNp1ktGK1DAUhl8l5LozNG3TdnIhuO10d8BFcfXGdpE4zcwU2qSkiXQd5nbVfYgFwRcQvFHQtxnFtzCTdsYLNRSSw_-dv-ecZAuXomSQwLWk7QY8SwsOzHqYL3irFQFe3JsPXYPJ5AE4yxPBX3spAb4HVlWtmOwc4Pf-9ZB1Zqkkv6T9EyHqiq8PrNd7o55YPT25hMG_XFJLzf_rMrd6lmc1VYpxAlDoukDzSnUjkVniPE8Z75jRvXiQHfCUPXo-QucWushTKVpxaFVSxYA7xaN-YfXFYAIea2Xngdyj1ZVYqYb2hh74Tr8aZpgxqrRkL-e9knSpKsHzn--_7L9__nH3bf_26_7Tx-O4xqmMbY_dDRvj5V_GSU27rlpVS2pN9-9uf324_2OXjX2N5Q_b4mQHHXPHVQmJkpo5sGGyoYcQbg9IAdWGNayAxBxLtqK6VgUs-M6ktZS_EKI5Zkqh15tjoNvSjC2tqCnxRFCtxNUNX54yzO-ZTITmChIUYmsJyRb2JoxmU2-GXW-GMApR4EYOvIFkgqdxEGLsRkaLoihAOwe-sVW403jmY4SDMAoDP_Kj2IGsrJSQl8NTti969xuxBuHU)
