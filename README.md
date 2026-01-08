@@ -1,25 +1,60 @@
-# adV2025.task
+GitHubのリポジトリ（`README.md`）にそのままコピー＆ペーストして使える、実用的で技術的なMarkdownを作成しました。
+
+最新のKeras/TensorFlowの書き方（`Input(shape)`）や、追加したドロップアウトについても盛り込んでいます。
+
+---
+
+# Fashion-MNIST Classification with CNN
+
+アドビの期末課題
+
+## 1. プロジェクト概要
+
+Google Colab上で構築した、畳み込みニューラルネットワーク（CNN）による衣類画像の10クラス分類。28x28ピクセルのグレースケール画像データセット「Fashion-MNIST」を使用し、
+基本的なCNN構造に、と過学習対策（Dropout）の有無による学習の違いを見る
+
+## 2. アルゴリズムと数式
+
+### 畳み込み演算 (Convolution)
+
+画像の特徴（エッジやパターン）を抽出するために、カーネル（フィルタ）を用いた畳み込み演算の部分
+
+### 活性化関数 (ReLU)
+
+モデルに非線形性を導入し、複雑な形状を学習可能にするため、中間層にReLUを使用
+
+### 出力層 (Softmax)
+
+最終的な10クラスの予測確率を算出するためにソフトマックス関数を使用
+
+## 3. モデル構成
 
 
-$$![test](https://github.com/Takuto2345/robosys202x/actions/workflows/test.yml/badge.svg)$$
 
-## 概要
-簡単な機械学習
+| レイヤー | 出力形状 | パラメータ | 説明 |
+| --- | --- | --- | --- |
+| **Input** | (28, 28, 1) | 0 | 入力データの定義 |
+| **Conv2D** | (26, 26, 32) | 320 | 3x3フィルタによる特徴抽出 |
+| **MaxPooling2D** | (13, 13, 32) | 0 | 空間情報のダウンサンプリング |
+| **Conv2D** | (11, 11, 64) | 18,496 | より高度な形状特徴の抽出 |
+| **Flatten** | (1600) | 0 | 1次元ベクトルへの変換 |
+| **Dense** | (128) | 204,928 | 特徴の統合 |
+| **Dropout(0.5)** | (128) | 0 | 過学習の防止（50%無効化） |
+| **Dense(Output)** | (10) | 1,290 | 10クラス分類の出力 |
 
+## 4. 学習の評価
+Googlecolabコード上にあるので確認してください
 
+```python
 
 ```
 
-$ ./plus < <ファイル名> 
-```
+## 5. 参考文献
 
-## インストール方法
+* **Dataset**: [zalandoresearch/fashion-mnist](https://github.com/zalandoresearch/fashion-mnist)
 
-* adV3035.task :
-```
-$ git clone https://github.com/Takuto2345/robosys202x.git
-```
 
+---
 
 ## ライセンス
 
