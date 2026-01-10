@@ -46,7 +46,7 @@ $$\sigma(\mathbf{z})_i = \frac{e^{z_i}}{\sum_{j=1}^{10} e^{z_j}}$$
 | **Dense(Output)** | (10) | 650 | 10クラス分類の出力 |
 
 ## 4. 使用方法
-#### 1.  以下のボタンからこの直接Google Colabに直接移動し、実行することが出来ます。
+#### 1.  以下のボタンからこの直接Google Colabに直接移動し、実行することが出来ます
 Dropout有り
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Takuto2345/adV2025.task/blob/main/2025fasion_dp_mist.ipynb)
@@ -55,7 +55,15 @@ Dropout無し
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Takuto2345/adV2025.task/blob/main/2025fasion_mist.ipynb)
 
-####  2.  
+####  2.　ランタイム→ランタイムのタイプの変更でGPUを選択（軽いのでCPUでもできますが時間がかかります）
+
+わからない場合は以下のサイトを参考にしてください
+
+[Google Colab入門：CPU/GPU/ローカルのランタイム接続してみる
+](https://zenn.dev/usagi1975/articles/2025-12-06-000_google_colab)
+
+#### 3. 上から順に実行を押すか、[すべてのセルを実行]を押してください
+
 ## 5. 参考文献
 
 * **Dataset**: [zalandoresearch/fashion-mnist](https://github.com/zalandoresearch/fashion-mnist)
