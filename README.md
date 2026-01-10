@@ -73,7 +73,7 @@ Dropout無し
 ![dpの学習](https://github.com/Takuto2345/adV2025.task/blob/f73c03ece7c06ca728b4a7ca017dfe23bde6999d/dp.loss.png)
 
 #### dp無し   
-![dpの学習](https://github.com/Takuto2345/adV2025.task/blob/c53b9ebb79588e7f655aa4ac3954a83a185ba3ea/dp.loss.png)
+![dpの学習](https://github.com/Takuto2345/adV2025.task/blob/c53b9ebb79588e7f655aa4ac3954a83a185ba3ea/no.loss.png)
 
 ### 2. 分類の結果
 
