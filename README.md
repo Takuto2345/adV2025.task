@@ -45,12 +45,16 @@ $$\sigma(\mathbf{z})_i = \frac{e^{z_i}}{\sum_{j=1}^{10} e^{z_j}}$$
 | **Dense(Output)** | (10) | 1,290 | 10クラス分類の出力 |
 
 ## 4. 使用方法
-1.  以下のボタンからこの直接Google Colabに直接移動し、実行することができる.
-### 
+#### 1.  以下のボタンからこの直接Google Colabに直接移動し、実行することが出来ます。
 Dropout有り
+
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Takuto2345/adV2025.task/blob/main/2025fasion_dp_mist.ipynb)
 
 Dropout無し
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Takuto2345/adV2025.task/blob/main/2025fasion_mist.ipynb)
+
+####  2.  
 ## 5. 参考文献
 
 * **Dataset**: [zalandoresearch/fashion-mnist](https://github.com/zalandoresearch/fashion-mnist)
