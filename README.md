@@ -69,13 +69,22 @@ Dropout無し
 
    dp(Dropout)なしの場合ではエポック２のあたりから(trainTraining Accuracy)がval(Validation Accuracy) を追い越してしまい、lossについてもエポック３を過ぎたあたりで valが下げ止まり、わずかに上昇してしまうことから過学習であることがわかる。対してdp有りの学習では全てのエポックにおいて ValがTrainを上回っている. 以上よりdp有のほうより信頼度が高いモデルであると考えられる。
 
-   
+#### dp有り   
 ![dpの学習](https://github.com/Takuto2345/adV2025.task/blob/f73c03ece7c06ca728b4a7ca017dfe23bde6999d/dp.loss.png)
 
-###2. 分類の結果
+#### dp無し   
+![dpの学習](https://github.com/Takuto2345/adV2025.task/blob/c53b9ebb79588e7f655aa4ac3954a83a185ba3ea/dp.loss.png)
+
+### 2. 分類の結果
 
   分類においては精度が向上したものと低下したものに分かれた。特に履物（Sandal, Sneaker, Ankle boot）についてはdp無しではSneakerがAnkle bootと誤認される画像が80枚あったが、dp有りの場合 誤認されたのが23枚になっている。また、両方のモデルで最も困難な分類はShirtであった。以上から形がはっきりとした分類のクラスにおいてはDropout層をいれることにより、性能は向上したが、形が似ているShirtではどちらも誤分類してしまい。問題として挙げられた。
+
+#### dp有り
 ![dpの学習](https://github.com/Takuto2345/adV2025.task/blob/f73c03ece7c06ca728b4a7ca017dfe23bde6999d/dp%2Cmatr.png)
+
+
+#### dp無し
+![dpの学習](https://github.com/Takuto2345/adV2025.task/blob/c53b9ebb79588e7f655aa4ac3954a83a185ba3ea/no.matir.png)
 ## 6. 参考文献
 
 * **Dataset**: [zalandoresearch/fashion-mnist](https://github.com/zalandoresearch/fashion-mnist)
