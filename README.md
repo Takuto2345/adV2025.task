@@ -57,7 +57,6 @@ Googlecolabコード上にあるので確認してください
 * ## モデルの参考文献
 - [TensorFlow Tutorials - Basic classification](https://www.tensorflow.org/tutorials/keras/classification)
 - [Keras Documentation - Simple MNIST convnet](https://keras.io/examples/vision/mnist_convnet/)
-- [The MNIST Database of handwritten digits](http://yann.lecun.com/exdb/mnist/)
 - [入門編：MNISTにおけるモデル学習](https://qiita.com/riku1220/items/b9d1894a84f2e357b335)
 
 
