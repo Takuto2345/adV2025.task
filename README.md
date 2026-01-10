@@ -8,6 +8,25 @@
 Google Colab上で構築した、畳み込みニューラルネットワーク（CNN）による衣類画像の10クラス分類。28x28ピクセルのグレースケール画像データセット「Fashion-MNIST」を使用し、
 基本的なCNN構造に、と過学習対策（Dropout）の有無による学習の違いを見る
 
+### 環境
+
+python:3.12.12
+
+GPU: Tesla T4
+
+TensorFlow: 2.19.0
+
+PyTorch: 2.9.0+cu126
+
+NumPy: 2.0.2
+
+Seaborn version: 0.13.2
+
+Matplotlib version: 3.10.0
+
+
+
+
 ## 2. アルゴリズムと数式
 
 ### 畳み込み演算 (Convolution)
