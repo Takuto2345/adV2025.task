@@ -35,7 +35,7 @@ $$\sigma(\mathbf{z})_i = \frac{e^{z_i}}{\sum_{j=1}^{10} e^{z_j}}$$
 
 | レイヤー | 出力形状 | パラメータ | 説明 |
 | --- | --- | --- | --- |
-| **Input** | (28, 28, 1) | 0 | 入力データの定義(RGBはないため今回はチャンネルは１) |
+| **Input** | (28, 28, 1) | 0 | 入力データの定義(RGBではないため今回はチャンネルは１) |
 | **Conv2D** | (26, 26, 32) | 320 | 3x3フィルタによる特徴抽出 |
 | **MaxPooling2D** | (13, 13, 32) | 0 | 空間情報のダウンサンプリング |
 | **Conv2D** | (11, 11, 64) | 18,496 | より高度な形状特徴の抽出 |
@@ -64,7 +64,19 @@ Dropout無し
 
 #### 3. 上から順に実行を押すか、[すべてのセルを実行]を押してください
 
-## 5. 参考文献
+## 5. 結果
+### 1.  学習の結果
+
+   dp(Dropout)なしの場合ではエポック２のあたりから(trainTraining Accuracy)がval(Validation Accuracy) を追い越してしまい、lossについてもエポック３を過ぎたあたりで valが下げ止まり、わずかに上昇してしまうことから過学習であることがわかる。対してdp有りの学習では全てのエポックにおいて ValがTrainを上回っている. 以上よりdp有のほうより信頼度が高いモデルであると考えられる。
+
+   
+![dpの学習](https://github.com/Takuto2345/adV2025.task/blob/f73c03ece7c06ca728b4a7ca017dfe23bde6999d/dp.loss.png)
+
+###2. 分類の結果
+
+  分類においては精度が向上したものと低下したものに分かれた。特に履物（Sandal, Sneaker, Ankle boot）についてはdp無しではSneakerがAnkle bootと誤認される画像が80枚あったが、dp有りの場合 誤認されたのが23枚になっている。また、両方のモデルで最も困難な分類はShirtであった。以上から形がはっきりとした分類のクラスにおいてはDropout層をいれることにより、性能は向上したが、形が似ているShirtではどちらも誤分類してしまい。問題として挙げられた。
+![dpの学習](https://github.com/Takuto2345/adV2025.task/blob/f73c03ece7c06ca728b4a7ca017dfe23bde6999d/)
+## 6. 参考文献
 
 * **Dataset**: [zalandoresearch/fashion-mnist](https://github.com/zalandoresearch/fashion-mnist)
 * ## モデルの参考文献
