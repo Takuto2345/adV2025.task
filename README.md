@@ -54,6 +54,10 @@ Googlecolabコード上にあるので確認してください
 ## 5. 参考文献
 
 * **Dataset**: [zalandoresearch/fashion-mnist](https://github.com/zalandoresearch/fashion-mnist)
+* ## モデルの参考文献
+- [TensorFlow Tutorials - Basic classification](https://www.tensorflow.org/tutorials/keras/classification)
+- [Keras Documentation - Simple MNIST convnet](https://keras.io/examples/vision/mnist_convnet/)
+- [The MNIST Database of handwritten digits](http://yann.lecun.com/exdb/mnist/)
 
 
 ---
