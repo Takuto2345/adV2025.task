@@ -75,7 +75,7 @@ Dropout無し
 ###2. 分類の結果
 
   分類においては精度が向上したものと低下したものに分かれた。特に履物（Sandal, Sneaker, Ankle boot）についてはdp無しではSneakerがAnkle bootと誤認される画像が80枚あったが、dp有りの場合 誤認されたのが23枚になっている。また、両方のモデルで最も困難な分類はShirtであった。以上から形がはっきりとした分類のクラスにおいてはDropout層をいれることにより、性能は向上したが、形が似ているShirtではどちらも誤分類してしまい。問題として挙げられた。
-![dpの学習](https://github.com/Takuto2345/adV2025.task/blob/f73c03ece7c06ca728b4a7ca017dfe23bde6999d/)
+![dpの学習](https://github.com/Takuto2345/adV2025.task/blob/f73c03ece7c06ca728b4a7ca017dfe23bde6999d/dp%2Cmatr.png)
 ## 6. 参考文献
 
 * **Dataset**: [zalandoresearch/fashion-mnist](https://github.com/zalandoresearch/fashion-mnist)
